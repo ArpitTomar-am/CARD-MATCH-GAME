@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Memory Card Game</title>
+<!-- Link CSS -->
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app" role="application" aria-label="Memory card game">
+<header>
+<div>
+<h1>Memory Match — Shuffle & Find Pairs</h1>
+<div class="muted">Flip two cards to find matching pairs. Try to finish fast!</div>
+</div>
+<div class="controls">
+<div class="stats">
+<div><strong id="moves">0</strong> moves</div>
+<div><strong id="pairsFound">0</strong>/<span id="totalPairs">0</span> pairs</div>
+<div><strong id="timer">00:00</strong></div>
+</div>
+<select id="sizeSelector" title="Choose board size">
+<option value="8">4x4 (8 pairs)</option>
+<option value="12">6x4 (12 pairs)</option>
+<option value="15">6x5 (15 pairs)</option>
+</select>
+<button class="btn" id="restartBtn">Restart</button>
+</div>
+</header>
+<main>
+<div id="board" class="board" aria-live="polite"></div>
+</main>
+<footer>
+<div class="muted">Built with ❤️ — customize emojis in script.js</div>
+<div>
+<button class="btn secondary" id="hintBtn">Show Brief Hint</button>
+</div>
+</footer>
+</div>
+<div class="overlay" id="overlay" role="dialog" aria-modal="true">
+<div class="dialog" id="dialog">
+<h2>Congratulations! 🎉</h2>
+<p class="muted" id="dialogText">You found all pairs.</p>
+<div style="margin-top:12px;">
+<button class="btn" id="playAgain">Play Again</button>
+<button class="btn secondary" id="closeDialog">Close</button>
+</div>
+</div>
+</div>
+<!-- Link JS -->
+<script src="script.js"></script>
+</body>
+</html>
